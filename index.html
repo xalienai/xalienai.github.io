@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XalienAI Engine</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('bg1.gif') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      text-align: center;
+      <!-- padding-top: 60px; -->
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    * {
+      position: relative;
+      z-index: 2;
+    }
+
+    header {
+      margin-bottom: 40px;
+      background: rgba(0, 140, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .logo {
+      width: 150px;
+      height: 150px;
+      background: url('logo1.jpg') no-repeat center center;
+      background-size: contain;
+      border-radius: 100%;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: opacity 0.3s ease;
+    }
+
+    .logo:hover {
+      opacity: 0.7;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 20px 0;
+      line-height: 1.6;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .feature {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 300px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .feature h3 {
+      font-size: 1.5rem;
+      margin: 0 0 10px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.2rem;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.2);
+      transition: background 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .social-links a:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    .social-links a img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .roadmap {
+      margin: 50px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .phase {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      padding: 15px 20px;
+      width: 250px;
+      text-align: left;
+      position: relative;
+    }
+
+    .phase.active {
+      background: rgba(100, 149, 237, 0.3);
+      border-color: #6495ed;
+      color: #6495ed;
+    }
+
+    .phase::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -20px;
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      border: 2px solid #6495ed;
+      border-radius: 50%;
+    }
+
+    .phase.active::before {
+      background: #6495ed;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"></div>
+    <div>
+      <h1>XalienAI Game Engine</h1>
+      <p>Intelligent AI based Game Engine for easy game creation. Backed by the Solana-chain. Coming soon!</p>
+    </div>
+  </header>
+
+  <section class="features">
+    <div class="feature">
+      <h3>Character and object modeling</h3>
+      <p>Seamlessly generate and animate character models with just a few prompts, and easily link them to any input method.</p>
+    </div>
+    <div class="feature">
+      <h3>Audio and music</h3>
+      <p>Generate audio and music for your characters and the world based on the theme of the game. No more headache's due to copyright issues or lack of music producers.</p>
+    </div>
+    <div class="feature">
+      <h3>Intelligent AI-NPC's</h3>
+      <p>Leveraging AI, easily generate human-like NPC's to interact with in the game world without having to explicitly hard-code every interaction.</p>
+    </div>
+    <div class="feature">
+      <h3>Game compilation and publishing</h3>
+      <p>Headache-free game compilation and publishing into our on-chain publishing platform at the press of a button.</p>
+    </div>
+  </section>
+
+  <div class="social-links">
+    <a href="https://twitter.com/XalienAI" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter Icon">Twitter
+    </a>
+    <a href="https://t.me/+Pmy7rX5FivoyNzE0" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/telegram-app.png" alt="Telegram Icon">Telegram
+    </a>
+  </div>
+
+  <section class="roadmap">
+    <h2>Roadmap</h2>
+    <div class="phase active" id="phase-development">
+      <h3>Development</h3>
+      <p>Building the foundation and core features.</p>
+    </div>
+    <div class="phase" id="phase-funding">
+      <h3>Funding</h3>
+      <p>Securing resources for growth through the Solana-chain. The link will be made available here when this stage is reached.</p>
+    </div>
+    <div class="phase" id="phase-token">
+      <h3>Token Shareholder Meeting</h3>
+      <p>Engaging with shakeholders for transparency and input. Top shareholders will be invited to a private Telegram dev-group.</p>
+    </div>
+    <div class="phase" id="phase-alpha">
+      <h3>Public Alpha Release</h3>
+      <p>Introducing the first version to the public for feedback.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 XalienAI. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Highlight the current phase (simple HTML/JS modification)
+    function setActivePhase(phaseId) {
+      document.querySelectorAll('.phase').forEach(phase => phase.classList.remove('active'));
+      document.getElementById(phaseId).classList.add('active');
+    }
+
+    // Example: To change the phase, call setActivePhase with the phase ID
+    // setActivePhase('phase-funding');
+  </script>
+</body>
+</html>
